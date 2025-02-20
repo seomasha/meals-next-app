@@ -1,3 +1,4 @@
+import MealsGrid from "@/components/meals/meals-grid";
 import modules from "./page.module.css";
 import Link from "next/link";
 
@@ -17,7 +18,9 @@ export default function MealsPage() {
           <Link href="/meals/share">Share Your Favorite Recipe</Link>
         </p>
       </header>
-      <main className={modules.main}></main>
+      <main className={modules.main}>
+        <MealsGrid meals={[]} />
+      </main>
     </>
   );
 }
